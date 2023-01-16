@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center md:flex-row h-full justify-start lg:justify-evenly lg:gap-3">
+	<div class="flex flex-1 flex-col items-start justify-center px-16 py-6">
+		<h1 class="font-bold text-4xl">Git Finder</h1>
+		<section>
+			<p class="font-semibold text-lg">Let's search write any name and we get the profile on GitHub if exists to you! It's simple</p>
+		</section>
+
+		<input type="search" placeholder="AntonioLourencos" class="bg-gray-700 py-4 px-8 outline-none rounded-md font-bold mt-3" (keydown)="handleSearch($event)" value="{{ search }}" />
+	</div>
+
+	<div class="flex flex-col items-start justify-center px-16 py-6 lg:w-2/5">
+		<h1 class="font-bold text-lg">About Project</h1>
+		<section>
+			<p class="font-normal text-lg">During the process of learning any thing we need a challenge and as I'm learning Angular I decided to consume a Git API.</p>
+			<p class="font-normal text-lg">I chose to make a system like this because here I'm using the basics patterns of web development, components, styles.</p>
+			<p class="font-normal text-lg">Looking with a Framework side I'm learning and improving my knowledges of RestFull, logics, folder structures, capacity of understand docs and much more.</p>
+		</section>
+	</div>
+</div>

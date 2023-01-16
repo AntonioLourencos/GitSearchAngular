@@ -1,0 +1,35 @@
+<div class="flex flex-col items-center md:flex-row h-full justify-start lg:justify-evenly lg:gap-3">
+	<div class="flex flex-col items-start justify-center px-16 py-6">
+		<img class="h-48 rounded-full" src="{{ profile.avatar_url }}" />
+		<a href="{{ profile.html_url }}" target="_blank">
+			<h1 class="w-full text-center mt-4 text-2xl font-semibold">{{ profile.name }}</h1>
+		</a>
+		<h1 class="w-full text-center">{{ profile.login }}</h1>
+		<span class="w-full text-center">{{ profile.bio }}</span>
+
+		<span class="w-full text-center text-orange-400">{{ error }}</span>
+	</div>
+
+	<div class="h-3/5">
+		<h1 class="font-bold text-lg w-full text-center py-5">Repositories</h1>
+
+		<table>
+			<thead>
+				<tr>
+					<th class="py-2 px-5 text-center">Name</th>
+					<th class="py-2 px-5 text-center">Stars</th>
+					<th class="py-2 px-5 text-center">Forks</th>
+					<th class="py-2 px-5 text-center">Check Repository</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let repository of repos" class="border-b-2 border-slate-500">
+					<td class="py-2 px-5 text-center">{{ repository.name }}</td>
+					<td class="py-2 px-5 text-center">{{ repository.stargazers_count }}</td>
+					<td class="py-2 px-5 text-center">{{ repository.forks }}</td>
+					<td class="py-2 px-5 text-center"><a [href]="repository.html_url" target="_blank">Visit</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
